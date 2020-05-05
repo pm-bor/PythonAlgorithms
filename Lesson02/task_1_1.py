@@ -55,13 +55,5 @@ while True :
             print ("Ошибка")
 
 
-import operator
-
-operations = {
-    '+': operator.add,
-    '*': lambda x, y: x * y,
-    # ...
-}
-
 def calc(operation, a, b):
     return operations[operation](a, b)
