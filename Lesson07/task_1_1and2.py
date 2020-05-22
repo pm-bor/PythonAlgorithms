@@ -36,9 +36,8 @@ def bubble(array):
 
 range_size = 100
 array = [randint(-99, 100) for _ in range(range_size)]
-original_array = array
 print('Исходный:   ', " ".join(["%+3s" % element for element in array]))
 print(timeit.timeit("b(array)", setup="from __main__ import b, array", number=100))
-array = original_array
+array = [randint(-99, 100) for _ in range(range_size)]
 print(timeit.timeit("bubble(array)", setup="from __main__ import bubble, array", number=100))
 print('По убыванию:', " ".join(["%+3s" % element for element in array]))
